@@ -1,0 +1,9 @@
+<h3 appHighlight>Learn app</h3>
+<router-outlet></router-outlet>
+<p>app counter val: {{ counterVal }}</p>
+<h3>output(from home to app)</h3>
+<app-home (valueChange)="logCounter($event)"></app-home>
+
+<h3>Input(from app to home) </h3>
+<app-home [changedVal]="counter"></app-home>
+<button class="btn btn-primary" (click)="updateCounter()">App button</button>

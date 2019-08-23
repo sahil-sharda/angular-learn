@@ -1,0 +1,8 @@
+<p appHighlight [defaultColor]="'blue'" [HighlightColor]="'yellow'"  >{{ inputVal | shorten | uppercase }}</p>
+<input appHighlight class="" type="text" (input)="changeVal($event)" />
+<input class="" type="text" [(ngModel)]="inputVal" />
+<button class="btn btn-primary" (click)="valueChanged()" >Send counter to app component</button>
+<p>home counter val: {{ counter }}</p>
+<p>new {{ changedVal }}</p>
+<input type="text" #inputValue />
+<p>{{ inputValueForView }}</p>
